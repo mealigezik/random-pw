@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Password Generator</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="bg-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Password Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="container text-center mt-5">
-      <input class="m-4 p-3 text-center rounded-4" id="pw" type="text" readonly value="Your PW in here!">
-      <br>
-      <button class="btn btn-warning">Click for Random PW</button>
-      <br><br>
-      <p id="warning" class="text-light"> </p>
-      <br><br>
-      <a href="http://bilgepanter.com" class="text-warning text-decoration-none">bilgepanter.com</a>
-    </div>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <script src="app.js"></script>
-  </body>
+<body class="bg-dark">
+
+  <div class="container text-center mt-5">
+    <br><input class="m-2 rounded-4 p-3 pe-5 ps-5 text-center" id="pw" type="text" readonly value="Your PW in here!">
+    <br><button class="m-2 p-2 rounded-3" onclick="myFunction()"><i class="fa-regular fa-copy"></i></button>
+    <br><button class="m-2 btn btn-warning">Click for Random PW</button>
+    <br><p id="warning" class="m-2 text-light"></p>
+    <br><a href="http://bilgepanter.com" class="text-warning text-decoration-none">bilgepanter.com</a>
+
+
+    <script>
+      function myFunction() {
+        var copyText = document.getElementById("pw");
+        copyText.select();
+        navigator.clipboard.writeText(copyText.value);
+      } </script>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
 </html>
