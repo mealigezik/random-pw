@@ -2,6 +2,8 @@ const symbols = "!@#$%^&*()\\_+~|}{[]:;?><,./-=";
 const numbers = "0123456789";
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
+
+let warning = document.getElementById("warning");
 let sum = "";
 let sum1 = "";
 
@@ -12,9 +14,8 @@ button.addEventListener("click", () => {
   randomPW();
   input.value = "";
   input.value = sum1;
-  //sum1 = "";
   sum = "";
-  // input.value = "";
+  warning.innerText = "PW will be lost in 6 sec"
 });
 
 function randomPW() {
@@ -34,7 +35,17 @@ function randomPW() {
   sum1 = [...sum];
   sum1 = sum1.sort(() => Math.random() - 0.5).join("");
 
+  setTimeout(() =>{
+    warning.innerText = "";
+  },6000);
+  setTimeout(() =>{
+    input.value = "Your PW in here!";
+  },6000);
+}
+
+
   // return sum1;
   // console.log(sum); //?shufflesiz
   // console.log(sum1); //!shuffleli
-}
+  
+  
