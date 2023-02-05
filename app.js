@@ -37,7 +37,7 @@ function randomPW() {
 
   setTimeout(() =>{
     warning.innerText = "";
-  },6000);
+  },2000);
   setTimeout(() =>{
     input.value = "Your PW in here!";
   },6000);
