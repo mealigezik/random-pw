@@ -1,38 +1,24 @@
-Visit with this link
-https://mealigezik.github.io/random-pw/
+# Random Password Generator
 
+A JavaScript practice project that generates passwords according to a set of character requirements.
 
-Purpose of the this coding challenge is to write a code that can generate random password for 10 characters as default and expected constraints below.
+## Demo
 
-Expected Outcome
-password length must be equal to 10
+[Open the live demo](https://mealigezik.github.io/random-pw/)
 
-there should be 3 numbers
+## Requirements explored
 
-and there should 2 symbols from below:
+- Default password length of 10 characters
+- Uppercase and lowercase letters
+- Numeric characters
+- Special characters
 
-!@#$%^&*()\_+~|}{[]:;?><,./-=
-excluding single and double quotes
+The original exercise describes a specific distribution of numbers and symbols. Check the implementation for the exact rules enforced by the generator.
 
-there should be minimum 1 lower and 1 upper case letters,
+## Run
 
-valid samples:
+Open the project's `index.html` file in a browser.
 
-Aa123&!xyz
-Aa@/456stu
-123aA(p?rs
-invalid samples:
+## Status
 
-AB123&!XYZ   // no lower case letters
-ab123&!xyz   // no upper case letters
-Aa@c456stu   // only one symbol
-12aA(p?rsz   // only two numbers
-Learning Outcomes
-At the end of the this coding challenge, students will be able to;
-
-analyze a problem, identify and apply programming knowledge for appropriate solution.
-
-demonstrate their knowledge of algorithmic design principles by using JavaScript effectively.
-
-Problem Statement
-Create a button and it is generate a new password and present it on HTML page.
+Small educational project. Do not use it as a security-reviewed password manager or cryptographic tool.
